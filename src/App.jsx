@@ -1,13 +1,9 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
-// import { Routes, Route } from 'react-router-dom'
 import Properties from "./pages/properties";
 import Mls from "./pages/Mls";
 import News from "./pages/news";
 import Home from "./pages/Home";
-import Search from "./pages/search";
-
-import Contact from "./pages/contact";
+import {Contact }from "./pages/contact";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
