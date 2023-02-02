@@ -4,6 +4,7 @@ import Mls from "./pages/Mls";
 import News from "./pages/news";
 import Home from "./pages/Home";
 import {Contact }from "./pages/contact";
+import SingleNews from "./pages/blogDetail";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/readmore",
+    element: <SingleNews/>
   },
 ]);
 
