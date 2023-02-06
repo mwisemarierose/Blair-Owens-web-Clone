@@ -43,7 +43,7 @@ export const Filter = () => {
           </select>
         </div> */}
 
-        <div className='filterItem'>
+        <div className='filterItem' >
           <button type="submit" className='input btn-primary'>Search</button>
         </div>
 

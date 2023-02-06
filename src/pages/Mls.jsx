@@ -27,7 +27,7 @@ function Mls() {
     <div className='mls-cOntainer'>
       <div className='map-container'>map</div>
       <div className='w-full'>
-      <p><b>Searching: For Sale</b>, Cardiff, Carlsbad, Del Mar, La Jolla, North Park San Diego, Ramona, Rancho Santa Fe</p>
+      <p><b style={{color:'#342C2B'}}>Searching:</b> For Sale, Cardiff, Carlsbad, Del Mar, La Jolla, North Park San Diego, Ramona, Rancho Santa Fe</p>
         <div className='left-properties'>
           
           {data.map((item, index) => {

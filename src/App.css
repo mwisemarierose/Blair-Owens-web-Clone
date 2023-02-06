@@ -50,7 +50,7 @@ a {
 }
 
 a.active {
-  background-color: rgba(0, 19, 82, 0.096);
+  /* background-color: rgba(0, 19, 82, 0.096); */
   color: rgb(0, 19, 82);
   transition: all 0.8s ease;
 }
@@ -271,7 +271,7 @@ a.active::before {
 .mls-cOntainer {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
+  border: 1px solid rgb(226, 217, 217);
 }
 
 .map-container {
@@ -487,6 +487,9 @@ hr{
 
 .w-full {
   width: 100%;
+  color: grey;
+  font-size: 15px;
+  padding-left: 25px;
 }
 
 .flex {
@@ -535,3 +538,6 @@ hr{
 .h-20{
   height: 20%;
 }
+
+
+

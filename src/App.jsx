@@ -5,16 +5,19 @@ import News from "./pages/news";
 import Home from "./pages/Home";
 import {Contact }from "./pages/contact";
 import SingleNews from "./pages/blogDetail";
+import NewsDetails from'./pages/chatgpt';
+import LoginForm from "./pages/login";
+import Register from "./pages/register";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <Home />,
+  // },
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/properties",
     element: <Properties />,
   },
   {
@@ -33,6 +36,14 @@ const router = createBrowserRouter([
   {
     path: "/readmore",
     element: <SingleNews/>
+  },
+  {
+    path: "/register",
+    element: <Register />
+  },
+  {
+    path: "/login",
+    element: <LoginForm />
   },
 ]);
 

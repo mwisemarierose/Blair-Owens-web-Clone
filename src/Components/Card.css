@@ -1,0 +1,24 @@
+.card {
+  
+  width: 350px;
+  background-color: white;
+  height: 635px;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  margin-left: 500px;
+}
+
+@media only screen and (max-width: 620px) {
+  .card {
+    width: 90vw;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-height: 670px) {
+  .card {
+    height: 630px;
+  }
+}
