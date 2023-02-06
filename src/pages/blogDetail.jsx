@@ -5,6 +5,7 @@ import { FaFacebookF } from 'react-icons/fa'
 import { IoLogoTwitter } from 'react-icons/io'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { NewsCard } from '../components/blogCard'
+import LoginForm from './login'
 
 const news = [
     {
@@ -37,6 +38,7 @@ function SingleNews() {
     return (
         
     <div>
+        <LoginForm />
         <NavBar />
         <Filter />
         <div className='bg-white'>

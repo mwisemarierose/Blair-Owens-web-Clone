@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
 import "../App.css";
 import { HiOutlineUserCircle } from "react-icons/hi";
+
 export default function NavBar() {
+    const {openModal ,setOpenModal} = useState (false)
   return (
     <nav>
       <div>
@@ -41,7 +43,6 @@ export default function NavBar() {
       </ul>
 
       <div>
-        <a href="/login">
 
         {" "}
           <HiOutlineUserCircle
@@ -49,11 +50,11 @@ export default function NavBar() {
               fontSize: "2rem",
               fontWeight: "lighter",
             }}
+            onClick = {() =>{
+                document.getElementById('background').style.display ="flex"
+            }}
           />
-        </a>
         
-      
-          
         
       </div>
     </nav>

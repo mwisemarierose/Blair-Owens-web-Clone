@@ -3,6 +3,7 @@ import NavBar from '../Components/NavBar'
 import { CiSearch } from 'react-icons/ci'
 import  PropertyCard  from '../components/listingCard'
 import { Filter } from '../Components/filterP'
+import LoginForm from './login'
 export default function Properties() {
   const data = [
   {
@@ -46,6 +47,7 @@ export default function Properties() {
 return (
 
   <div>
+    <LoginForm />
     <NavBar />
     <Filter/>
     

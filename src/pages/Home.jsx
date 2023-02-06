@@ -1,8 +1,10 @@
 import Navbar from "../Components/NavBar";
+import LoginForm from "./login";
 
 export default function Home() {
     return (
       <div>
+        <LoginForm />
       <Navbar />
 
       <div className="left-area" >

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Card from '../components/Card'
 import "./LoginForm.css";
 import { BsCursor } from "react-icons/bs";
-import NavBar from "../Components/NavBar";
+
 
 export default function Register ({setOpenModal}) {
   const [username, setUsername] = useState("");
@@ -11,7 +10,7 @@ export default function Register ({setOpenModal}) {
   return (
     
     
-    <Card>
+    <div className="card">
         <button
         onClick={(e) => {
             e.preventDefault();
@@ -32,7 +31,7 @@ export default function Register ({setOpenModal}) {
       <input type="text" placeholder="Enter Username" name="email" required></input>
           <label for="email">Email</label>
       <input type="text" placeholder="Enter Email" name="email" required></input>
-      <label for="psw"><b>Password</b></label>
+      <label for="psw">Password</label>
       <input type="password" placeholder="Enter Password" name="psw" required></input>
         </div>
        <input type="submit" value="REGISTER" className="login_button" />
@@ -40,6 +39,6 @@ export default function Register ({setOpenModal}) {
       
       <div className="icons">
       </div>
-    </Card>
+    </div>
   );
 }

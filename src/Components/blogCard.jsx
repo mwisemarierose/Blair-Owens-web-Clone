@@ -19,7 +19,7 @@ export const NewsCard = ({ urlimg,title, description }) => {
         <p className="text-md">{description} </p>
         
       </div>
-      <button type="submit" className=' btn-primary'>Read more</button>
+     <a href="/readmore" ><button type="submit" className=' btn-primary'>Read more</button></a>
     </div>
 
   );

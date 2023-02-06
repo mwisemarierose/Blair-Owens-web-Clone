@@ -28,6 +28,7 @@ export default function News() {
   };
   return (
     <div>
+      <LoginForm />
       <NavBar />
       <Filter />
       <div className="newsBanner">

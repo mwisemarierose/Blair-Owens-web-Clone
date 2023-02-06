@@ -12,6 +12,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
+  
   // {
   //   path: "/",
   //   element: <Home />,
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <LoginForm />
+    element: <LoginForm open={open} onClick={()=> setOpen(true)}/>
   },
 ]);
 
