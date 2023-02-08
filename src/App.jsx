@@ -9,6 +9,7 @@ import NewsDetails from'./pages/chatgpt';
 import LoginForm from "./pages/login";
 import Register from "./pages/register";
 import ReactDOM from "react-dom/client";
+import ViewPage from "./pages/viewPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/mls",
     element: <Mls />,
+  },
+  {
+    path: "/view",
+    element: <ViewPage />,
   },
 
   {

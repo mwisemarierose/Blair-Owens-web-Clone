@@ -26,7 +26,7 @@ export default function ListingCard ({ price,bed,bath,img,btn }) {
                 <span className='text-sm'>Bed: <b>{bed}</b></span>
                 <span className='text-sm'>Bath: <b>{bath}</b></span>
                 <span className='text-sm'>Bed: <b>{bed}</b></span>
-                <button> View<b>{btn}</b></button>
+               <a href='/view'><button> View<b>{btn}</b></button> </a> 
               </div>
             </div>
             <div className='divider'></div>
