@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(255, 249, 241);
+  background-color: rgb(248, 239, 228);
 }
 
 .logo {
@@ -19,6 +19,7 @@ body {
 }
 
 nav {
+  background-color: rgb(248, 239, 228);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +99,7 @@ a.active::before {
   border-top: 1px solid rgba(183, 183, 183, 0.29);
   /* border: 1px solid red; */
   align-items: center;
-
+  background-color: rgb(248, 239, 228);
 }
 
 .bg-white {

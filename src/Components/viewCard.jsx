@@ -1,7 +1,7 @@
 import "../styles/styles.css";
 
 
-export default function ListingCard({ img}) {
+export default function ViewCard({ img}) {
   return (
     <div className="property-container">
       <div

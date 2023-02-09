@@ -34,12 +34,7 @@ export default function NavBar() {
         <li>
           <NavLink to={"/contact"}> Contact</NavLink>
         </li>
-        {/* <li>
-          <NavLink to={"/chat"}> ChatGPT</NavLink>
-        </li> */}
-        {/* <li>
-          <NavLink to={"/register"}> Register</NavLink>
-        </li> */}
+        
       </ul>
 
       <div>

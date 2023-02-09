@@ -7,7 +7,6 @@ import {Contact }from "./pages/contact";
 import SingleNews from "./pages/blogDetail";
 import NewsDetails from'./pages/chatgpt';
 import LoginForm from "./pages/login";
-import Register from "./pages/register";
 import ReactDOM from "react-dom/client";
 import ViewPage from "./pages/viewPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -43,10 +42,7 @@ const router = createBrowserRouter([
     path: "/readmore",
     element: <SingleNews/>
   },
-  {
-    path: "/register",
-    element: <Register />
-  },
+  
   {
     path: "/login",
     element: <LoginForm open={open} onClick={()=> setOpen(true)}/>
