@@ -1,6 +1,5 @@
 import React from 'react'
 import  PropertyCard  from '../components/listingCard'
-
 import { Filter } from '../components/filter'
 import NavBar from '../components/NavBar'
 import LoginForm from './login';
