@@ -18,7 +18,8 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/");
+        console.log('hereee')
+      navigate("/dashboard");
     }
   }, [isLoggedIn]);
 
@@ -57,7 +58,7 @@ export default function LoginForm() {
           It takes less than a minute.
         </div>
         <form id="popup-login-form" className="popup-form">
-          <label>Username (use: agent)</label>
+          <label>Email (use: agent)</label>
           <input
             type={"text"}
             onChange={(e) => {
