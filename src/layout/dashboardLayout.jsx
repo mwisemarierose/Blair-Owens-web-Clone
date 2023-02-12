@@ -4,7 +4,7 @@ import { Outlet, useNavigate, NavLink } from "react-router-dom";
 export const DashboardLayout = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/dashboard/services");
+    navigate("/dashboard");
   }, []);
 
   return (

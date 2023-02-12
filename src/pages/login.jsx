@@ -18,12 +18,12 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (isLoggedIn) {
-        console.log('hereee')
       navigate("/dashboard");
     }
   }, [isLoggedIn]);
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault()
     dispatch(
       loginUser({
         email: userEmail,
