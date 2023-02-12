@@ -26,7 +26,6 @@ export const authSlice = createSlice({
 });
 
 export const loginUser = (data) => (dispatch) => {
-    console.log('hereeee')
   axios({
     method: "POST",
     url: "https://klabapi.onrender.com/api/auth/login",
