@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 89vh;
+  min-height: 89vh;
   padding: 10px 26px;
   width: 19vw;
   line-height: 26px;
@@ -40,7 +40,7 @@
   color: rgb(29, 29, 29);
 }
 #popup-login-form{
-  height: 220px;
+  min-height: 220px;
   margin-top: 20px;
   font-size: 17px;
   font-weight: 300;

@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { loginUser } from "../features/authenticationSlice";
+import { createUser, loginUser } from "../features/authenticationSlice";
+import { register } from "../features/authenticationSlice";
 import { RxCross1 } from "react-icons/rx";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -12,9 +13,14 @@ import "./LoginForm.css";
 export default function LoginForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoggedIn, error } = useSelector((state) => state.auth);
+  const { isLoggedIn, error, userCreated, loginSuccess } = useSelector(
+    (state) => state.auth
+  );
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -22,12 +28,32 @@ export default function LoginForm() {
     }
   }, [isLoggedIn]);
 
+  useEffect(
+    (res) => {
+      if (userCreated) {
+        //  document.getElementById('login-popup')
+        // navigate("/news");
+      }
+    },
+    [userCreated]
+  );
+
   const handleLogin = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     dispatch(
       loginUser({
         email: userEmail,
         password: userPassword,
+      })
+    );
+  };
+  const handleRegister = (e) => {
+    e.preventDefault();
+    dispatch(
+      createUser({
+        username: username,
+        email: email,
+        password: password,
       })
     );
   };
@@ -58,6 +84,13 @@ export default function LoginForm() {
           It takes less than a minute.
         </div>
         <form id="popup-login-form" className="popup-form">
+          <p
+            style={{
+              color: "red",
+            }}
+          >
+            {error}
+          </p>
           <label>Email (use: agent)</label>
           <input
             type={"text"}
@@ -74,14 +107,11 @@ export default function LoginForm() {
               setUserPassword(event.target.value);
             }}
           />
-           <p
-          style={{
-            color: "red",
-          }}
-        >
-          {error}
-        </p>
-          <button  onClick={handleLogin} className="popup-buttons" id="loginbutton">
+          <button
+            onClick={handleLogin}
+            className="popup-buttons"
+            id="loginbutton"
+          >
             LOGIN
           </button>
         </form>
@@ -130,11 +160,23 @@ export default function LoginForm() {
           <label>
             Username<span>*</span>
           </label>
-          <input type={"text"} id="newbie-username" />
+          <input
+            type={"text"}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            id="newbie-username"
+          />
           <label>
             Email<span>*</span>
           </label>
-          <input type={"text"} id="newbie-email" />
+          <input
+            type={"text"}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            id="newbie-email"
+          />
           <div className="newbie-double">
             <div className="newbie-double-left">
               <label>First Name</label>
@@ -152,24 +194,34 @@ export default function LoginForm() {
               <label>
                 Password<span>*</span>
               </label>
-              <input type={"text"} id="newbie-password" />
+              <input
+                type={"password"}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+                id="newbie-password"
+              />
             </div>
-            <div className="newbie-double-right">
+            {/* <div className="newbie-double-right">
               <label>
                 Password again<span>*</span>
               </label>
               <input type={"text"} id="newbie-password-confirm" />
-            </div>
-          </div>
-          <div id="acception">
-            <input type={"checkbox"} id="accept-checkbox" name="terms" />
+            </div> */}
+            <div id="acception">
+              {/* <input type={"checkbox"} id="accept-checkbox" name="terms" />
             <label id="terms-label">
               I accept the <span id="terms">terms & Conditions</span>
-            </label>
+            </label> */}
+            </div>
+            <button
+              id="create-account"
+              onClick={handleRegister}
+              className="popup-buttons"
+            >
+              Create Account
+            </button>
           </div>
-          <button id="create-account" className="popup-buttons">
-            Create Account
-          </button>
         </form>
       </div>
       <div id="forgot-password-popup">

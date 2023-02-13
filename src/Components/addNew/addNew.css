@@ -1,0 +1,91 @@
+.aos-navs {
+    width: 100%;
+    padding: 50px;
+}
+
+.aos-navs ul {
+    position: fixed;
+    overflow: hidden;
+    left: 23%;
+    right: 0;
+    width: 72%;
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(153, 152, 152, 0.75);
+    padding-left: 0;
+    z-index: 999;
+}
+
+.aos-navs ul li {
+    flex: 1;
+    border-right: 1px solid #c2c2c2;
+    padding: 20px 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    height: auto;
+    margin-top: 80px;
+}
+
+.card-header {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.card-header>* {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.inputs span {
+    position: absolute;
+    color: #3270FC;
+    padding: 9px 15px;
+    background-color: #F5F7FB;
+    border: 0;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+}
+
+.inputs input,
+.inputs textarea,
+.form-select {
+    height: 45px;
+    outline: none;
+    background-color: #F5F7FB;
+    padding-left: 50px;
+    border: 0;
+    border: 1px solid #dbdbdb;
+    color: #c2c2c2;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+.form-select {
+    font-size: 14px;
+    color: #7c7c7c;
+    background-color: #F5F7FB;
+}
+
+.col-md-4 label {
+    color: #c2c2c2;
+    font-size: 14px;
+}
+
+.aos-navs .active {
+    background-color: #F9F9F9;
+    color: #328EFB;
+}

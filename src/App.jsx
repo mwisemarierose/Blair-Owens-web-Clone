@@ -9,7 +9,8 @@ import NewsDetails from'./pages/chatgpt';
 import LoginForm from "./pages/login";
 import ReactDOM from "react-dom/client";
 import ViewPage from "./pages/viewPage";
-import { DashboardLayout } from "./layout/dashboardLayout";
+import Admin from './pages/Admin'
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: <Admin />,
   },
   {
     path: "/news",
