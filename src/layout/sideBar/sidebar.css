@@ -43,10 +43,6 @@
   margin-left: 8px;
   border-radius: 5px;
 }
-.sidebarListItem Link{
-  color:black
-}
-
 
 .sidebarListItem.active,
 .sidebarListItem:hover {

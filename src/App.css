@@ -567,4 +567,6 @@ hr{
   }
   
 /* Dashboard */
-
+.container-fluid {
+ background-color: #F5F7FB;;
+}

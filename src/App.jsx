@@ -8,10 +8,9 @@ import LoginForm from "./pages/login";
 import ViewPage from "./pages/viewPage";
 import Admin from './pages/Admin'
 import AddNew from "./Components/addNew/addNew";
-import dashboard from "./Components/dashboard/dashboard";
+import {Dashboard }from "./Components/dashboard/dashboard";
+import { Listing } from "./Components/myListings/listings";
 import { Route,Routes } from "react-router-dom";
-import { Dashboard } from "@material-ui/icons";
-
 
 
 
@@ -21,6 +20,9 @@ return(
       <Route path="/dashboard" element={<Admin/>}>
       <Route path="/dashboard/dash" element={<Dashboard/>}/>
       <Route path="/dashboard/addNew" element={<AddNew/>}/>
+      <Route path="/dashboard/listing" element={<Listing/>}/>
+
+
       </Route>
 
       <Route path="/" element={<Properties />} />
@@ -35,49 +37,5 @@ return(
 
 
 }
-
-// const router = createBrowserRouter([
-  
-//   {
-//     path: "/",
-//     element: <Properties />,
-//   },
-//   // {
-//   //   path: "/dashboard",
-//   //   element: <Admin />,
-//   // },
-//   {
-//     path: "/news",
-//     element: <News />,
-//   },
-//   {
-//     path: "/mls",
-//     element: <Mls />,
-//   },
-//   {
-//     path: "/view",
-//     element: <ViewPage />,
-//   },
-
-//   {
-//     path: "/contact",
-//     element: <Contact />,
-//   },
-//   {
-//     path: "/readmore",
-//     element: <SingleNews/>
-//   },
-  
-//   {
-//     path: "/login",
-//     element: <LoginForm open={open} onClick={()=> setOpen(true)}/>
-//   },
-// ]);
-
-// function App() {
-//   return <RouterProvider router={router}></RouterProvider>;
-//   return <RouterProvider routes={routes}></RouterProvider>;
-
-// }
 
 export default App;

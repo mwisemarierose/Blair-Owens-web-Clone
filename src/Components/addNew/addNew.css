@@ -4,11 +4,11 @@
 }
 
 .aos-navs ul {
-    position: fixed;
+    /* position: fixed; */
     overflow: hidden;
     left: 23%;
     right: 0;
-    width: 72%;
+    width: 100%;
     background-color: #fff;
     border: 1px solid #c2c2c2;
     border-radius: 10px;

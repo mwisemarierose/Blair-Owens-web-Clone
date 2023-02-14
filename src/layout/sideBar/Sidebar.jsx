@@ -48,8 +48,10 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Listings</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem border-bottom">
+              <NavLink to={"/dashboard/listing"} className="py-0">
               <FiList className="sidebarIcon" />
               My listings
+              </NavLink>
             </li>
             <li className="sidebarListItem border-bottom">
               {/* <Link to={"/"} className="py-0"> */}

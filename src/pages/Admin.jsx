@@ -1,8 +1,7 @@
 import Sidebar from "../layout/sideBar/Sidebar";
 import Topbar from "../layout/topBar/Topbar";
 import React from "react";
-import { Route, Routes,Outlet ,NavLink } from "react-router-dom";
-import AddNew from "../Components/addNew/addNew";
+import { Outlet} from "react-router-dom";
 
 function Admin() {
   return (
@@ -10,7 +9,7 @@ function Admin() {
       <Topbar />
       <div className="container-fluid d-flex">
         <Sidebar />
-<Outlet />
+        <Outlet />
       </div>
     </div>
   );
