@@ -1,14 +1,6 @@
 import React from "react";
 import "./topbar.css";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
 import { FaPlusCircle, FaSearch } from "react-icons/fa";
 
 export default function Topbar() {
@@ -25,7 +17,7 @@ export default function Topbar() {
           <div className="d-flex">
             <div className="searchContainer">
               <FaSearch />
-              <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="Search..." style={{}}/>
             </div>
             <div className="navigationMenus d-flex align-items-center">
               <div class="primary-navigation">
@@ -34,7 +26,7 @@ export default function Topbar() {
                     <a href="#">Home</a>
                   </li>
                   <li>
-                    <a href="#">Work</a>
+                    <a href="#">Listings</a>
                     <ul class="dropdown">
                       <li>
                         <a href="#">Web Development</a>
@@ -51,10 +43,13 @@ export default function Topbar() {
                     </ul>
                   </li>
                   <li>
-                    <a href="#">About</a>
+                    <a href="#">Agents</a>
                   </li>
                   <li>
-                    <a href="#">Contact</a>
+                    <a href="#">News</a>
+                  </li>
+                  <li>
+                    <a href="#">Pages</a>
                   </li>
                 </ul>
               </div>
