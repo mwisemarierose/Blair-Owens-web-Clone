@@ -4,7 +4,24 @@ import {IoLocationSharp} from 'react-icons/io5';
 import {BsFillStarFill} from 'react-icons/bs';
 import {BsFillEyeFill} from 'react-icons/bs';
 import {createList} from "../../features/listingSlice";
-// const handlePost{
+
+
+const handleLogin = (e) => {
+    e.preventDefault();
+    dispatch(
+      loginUser({
+        email: userEmail,
+        password: userPassword,
+      })
+    );
+
+  };
+// const handlePost(e){
+//     e.preventDefault();
+//     dispatch(
+//    cre
+    
+//     )
     
 // }
 
