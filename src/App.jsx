@@ -7,9 +7,9 @@ import SingleNews from "./pages/blogDetail";
 import LoginForm from "./pages/login";
 import ViewPage from "./pages/viewPage";
 import Admin from "./pages/Admin";
-import AddNew from "./Components/addNew/AddNew";
-import { Dashboard } from "./Components/dashboard/Dashboard";
-import { Listing } from "./Components/myListings/Listings";
+import AddNew from "./Components/AddNew/AddNew";
+import { Dashboard } from "./Components/Dashboard/Dashboard";
+import { Listing } from "./Components/MyListings/Listings";
 import { Route, Routes } from "react-router-dom";
 
 function App() {

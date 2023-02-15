@@ -4,7 +4,7 @@ import { FaDirections, FaInfo } from "react-icons/fa";
 import "./addNew.css";
 import { createList } from "../../features/listingSlice";
 
-function addNew() {
+export const  AddNew =()  =>{
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [img, setImg] = useState("");
