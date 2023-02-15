@@ -1,10 +1,10 @@
 import React from 'react'
-import { Filter } from '../components/filter'
+import { Filter } from '../Components/Filter'
 import NavBar from '../components/NavBar'
 import { FaFacebookF } from 'react-icons/fa'
 import { IoLogoTwitter } from 'react-icons/io'
 import { FaLinkedinIn } from 'react-icons/fa'
-import { NewsCard } from '../components/blogCard'
+import { NewsCard } from '../Components/BlogCard'
 import LoginForm from './login'
 
 const news = [

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
-import { Filter } from "../components/filter";
-import { NewsCard } from "../components/blogCard";
+import { Filter } from "../Components/Filter";
+import { NewsCard } from "../Components/BlogCard";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import LoginForm from "./login";

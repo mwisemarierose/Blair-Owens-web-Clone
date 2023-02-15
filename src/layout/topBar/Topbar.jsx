@@ -1,7 +1,6 @@
 import React from "react";
 import "./topbar.css";
-import { NotificationsNone, Language, Settings } from "@material-ui/icons";
-import { FaPlusCircle, FaSearch } from "react-icons/fa";
+import { FaBell, FaLanguage, FaPlusCircle, FaSearch } from "react-icons/fa";
 
 export default function Topbar() {
   return (
@@ -65,11 +64,11 @@ export default function Topbar() {
             />
           </div>
           <div className="topbarIconContainer border-start mx-2">
-            <NotificationsNone />
+            <FaBell />
             <span className="topIconBadge">2</span>
           </div>
           <div className="topbarIconContainer border-start mx-2">
-            <Language />
+            <FaLanguage />
             <span className="topIconBadge">2</span>
           </div>
           <div className="topbarIconContainer border-start mx-2">

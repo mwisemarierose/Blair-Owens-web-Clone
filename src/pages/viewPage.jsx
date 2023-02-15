@@ -1,10 +1,10 @@
 import React from "react";
-import { Filter } from "../components/filter";
+import { Filter } from "../Components/Filter";
 import NavBar from "../components/NavBar";
 import "../styles/styles.css";
-import PropertyCard from "../components/listingCard";
-import ViewCard from "../Components/viewCard";
-import SmallNav from "../Components/smallNav";
+import PropertyCard from "../Components/ListingCard";
+import ViewCard from "../Components/ViewCard";
+import SmallNav from "../Components/SmallNav";
 
 
 function viewPage() {

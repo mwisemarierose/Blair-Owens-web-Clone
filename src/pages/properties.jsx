@@ -1,8 +1,8 @@
 import React from 'react'
 import NavBar from '../Components/NavBar'
 import { CiSearch } from 'react-icons/ci'
-import  PropertyCard  from '../components/listingCard'
-import { Filter } from '../Components/filterP'
+import  PropertyCard  from '../Components/ListingCard'
+import { Filter } from '../Components/FilterP'
 import LoginForm from './login'
 export default function Properties() {
   const data = [
