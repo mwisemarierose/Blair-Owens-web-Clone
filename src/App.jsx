@@ -8,7 +8,7 @@ import LoginForm from "./pages/login";
 import ViewPage from "./pages/viewPage";
 import Admin from "./pages/Admin";
 import { AddNew } from "./Components/addNew/addNew";
-import { DashboardComponent } from "./Components/Dashboard/Dashboard";
+import { DashboardComponent } from "./Components/Dashboard/Board";
 import { Listing } from "./Components/MyListings/Listings";
 import { Route, Routes } from "react-router-dom";
 
