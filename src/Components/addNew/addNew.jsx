@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaDirections, FaInfo } from "react-icons/fa";
-import "./addNew.css";
+import "./style.css";
 import { createList } from "../../features/listingSlice";
 
 export const  AddNew =()  =>{

@@ -1,5 +1,5 @@
 import React from "react";
-import './dashboard.css';
+import './style.css';
 import {AiOutlineBarChart} from 'react-icons/ai';
 import {TbMessages} from 'react-icons/tb';
 import {AiOutlineHeart} from 'react-icons/ai';

@@ -1,5 +1,5 @@
 import React ,{useState} from "react";
-import "./listings.css";
+import "./style.css";
 import { IoLocationSharp } from "react-icons/io5";
 import { BsFillStarFill } from "react-icons/bs";
 import { BsFillEyeFill } from "react-icons/bs";
