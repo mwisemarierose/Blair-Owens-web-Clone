@@ -100,4 +100,3 @@ export const  AddNew =()  =>{
   );
 }
 
-export default addNew;
