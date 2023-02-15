@@ -7,16 +7,16 @@ import SingleNews from "./pages/blogDetail";
 import LoginForm from "./pages/login";
 import ViewPage from "./pages/viewPage";
 import Admin from "./pages/Admin";
-import { AddNew } from "./Components/addNew/addNew";
-import { Dashboards } from "./Components/Dashboard/Dashboard";
-import { Listing } from "./Components/MyListings/Listings";
+import { AddNew } from "./Components/addNew/addNew.jsx";
+import { Dashboard } from "./Components/Dashboard/Dashboard.jsx";
+import { Listing } from "./Components/MyListings/Listings.jsx";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <Routes>
       <Route path="/dashboard" element={<Admin />}>
-        <Route path="/dashboard/dash" element={<Dashboards />} />
+        <Route path="/dashboard/dash" element={<Dashboard />} />
         <Route path="/dashboard/addNew" element={<AddNew />} />
         <Route path="/dashboard/listing" element={<Listing />} />
       </Route>

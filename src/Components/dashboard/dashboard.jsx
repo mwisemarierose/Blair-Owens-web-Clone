@@ -9,7 +9,7 @@ import {AiOutlineCalendar} from 'react-icons/ai';
 import {TiMessage} from 'react-icons/ti';
 import { FaMapMarked } from "react-icons/fa";
 
-export const Dashboards = ()=>{
+export const Dashboard = ()=>{
     return (
         <div>
             <div id="generaldashboard-under-navigation">
