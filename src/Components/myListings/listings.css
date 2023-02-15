@@ -1,23 +1,28 @@
 #listing-card{
-    display: flex;
-    background-color: #F5F7FB;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    background-color: white;
     width: 100%;
-    padding: 150px;
-    gap:50px
+    margin-left: 30px;
+    margin-left: 50px;
+    margin-top: 150px;
+    
 }
+
 #listing-card-image{
     background: url("https://homeradar.kwst.net/images/all/1.jpg");
-    /* background-position: center; */
+    background-position: center;
     background-size: cover;
     height: 150px;
     width: 220px;
-    
+
 }
+
 #listing-card-desc{
-    /* margin: 20px 20px 20px 0px; */
-    margin-left: 0%;
+    margin: 20px 20px 20px 0px;
     height: 110px;
-    background-color: white;
+    
 }
 #listing-card-title{
     color: grey;
@@ -42,8 +47,6 @@
     padding-left: 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
     padding-bottom: 8px;
-    background-color: white;
-
 }
 #listing-card-rating .verified{
     color: #FACC39;
@@ -54,5 +57,4 @@
     width: calc(100% - 20px);
     margin-left: 20px;
     margin-top: 10px;
-    background-color: white;
 }

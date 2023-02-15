@@ -65,7 +65,7 @@ export default function Sidebar() {
               <span>2</span>
             </li>
             
-            <li className="sidebarListItem border-bottom">
+            <li className="sidebarListItem border-bottom" >
             <NavLink to={"/dashboard/addNew"} className="py-0"> 
               <FiFilePlus className="sidebarIcon" />
               Add New

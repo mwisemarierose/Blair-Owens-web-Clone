@@ -24,7 +24,7 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/dashboard");
+      navigate("/dashboard/dash");
     }
   }, [isLoggedIn]);
 

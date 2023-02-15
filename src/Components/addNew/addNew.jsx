@@ -1,5 +1,8 @@
 import React from "react";
-import { FaInfo, FaKey, FaMoneyBill, FaSuitcase } from "react-icons/fa";
+import {
+  FaDirections,
+  FaInfo,
+} from "react-icons/fa";
 import "./addNew.css";
 
 function addNew() {
@@ -22,65 +25,32 @@ function addNew() {
         </div>
         <div class="card-body row">
           <div className="col-md-4">
-            <label htmlFor="businessName">Listing Title</label>
+            <label htmlFor="title">Estate Title</label>
             <div className="inputs">
               <span>
-                <FaSuitcase />
+                <FaInfo/>
               </span>
-              <input
-                type="text"
-                placeholder="Name of your business"
-                name="businessName"
-              />
+              <input type="text" placeholder="Title" name="title" />
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <label htmlFor="address">Address</label>
+            <div className="inputs">
+              <span>
+                <FaDirections />
+              </span>
+              <input type="text" placeholder="address" name="address" />
             </div>
           </div>
           <div className="col-md-4">
-            <label htmlFor="type">Type</label>
-            <div className="inputs">
-              <select className="form-select">
-                <option value="">All Types</option>
-                <option value="rent">Rent</option>
-                <option value="sale">Sales</option>
-              </select>
-            </div>
+            <label htmlFor="image">image</label>
+              <input type="file" placeholder="" name="image" />
           </div>
-          <div className="col-md-4">
-            <label htmlFor="businessName">Listing Price</label>
-            <div className="inputs">
-              <span>
-                <FaMoneyBill />
-              </span>
-              <input
-                type="text"
-                placeholder="Name of your business"
-                name="businessName"
-              />
-            </div>
-          </div>
-          <div className="col-md-4">
-            <label htmlFor="category">Category</label>
-            <div className="inputs">
-              <select className="form-select">
-                <option value="">All Categories</option>
-                <option value="rent">House</option>
-                <option value="apartment">Apartment</option>
-              </select>
-            </div>
-          </div>
-          <div className="col-md-8">
-            <label htmlFor="businessName">Keywords</label>
-            <div className="inputs">
-              <span>
-                <FaKey />
-              </span>
-              <textarea
-                name="keywords"
-                id=""
-                className="w-100"
-                style={{ resize: "none" }}
-                placeholder="Maximum 15 , should be separated by commas"
-              ></textarea>
-            </div>
+          <div class="d-grid gap-2 col-3 mx-auto" style={{marginTop:"15px" ,backgroundColor: "#3270FC",color:"white"}}>
+            <button class="btn " >
+              Button
+            </button>
           </div>
         </div>
       </div>
