@@ -10,17 +10,16 @@ function addNew() {
   const [img, setImg] = useState("");
   const dispatch = useDispatch();
 
- 
   const handlePost = (e) => {
+    const Data = new FormData();
+  Data.append("title", title);
+  Data.append("desc", desc);
+  Data.append("image", img);
     e.preventDefault();
-    dispatch(
-      createList({
-        title: title,
-        desc: desc,
-        image: img,
-      })
-    );
+    dispatch(createList(Data));
   };
+  
+
   return (
     <div className="aos-navs w-100 d-flex flex-column">
       <ul>
@@ -79,7 +78,7 @@ function addNew() {
               placeholder=""
               name="image"
               onChange={(e) => {
-                setImg(e.target.value);
+                setImg(e.target.files[0]);
               }}
             />
           </div>

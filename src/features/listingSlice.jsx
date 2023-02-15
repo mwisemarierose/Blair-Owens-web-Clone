@@ -16,18 +16,20 @@ export const listSlice = createSlice({
 });
 
 export const createList = (data) => (dispatch) => {
+  const token = localStorage.getItem("token")
+  console.log(token)
   axios({
     method: "POST",
     url: "https://klabapi.onrender.com/api/posts/create",
     data: data,
     headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json",
-      accept: "application/json",
+      Authorization: `bearer ${token}`
     },
   }).then((res) => {
     dispatch(list());
     console.log('helloo')
+  }).catch((err) => {
+    console.log(err)
   });
 };
 
