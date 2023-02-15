@@ -2,27 +2,23 @@ import "./App.css";
 import Properties from "./pages/properties";
 import Mls from "./pages/Mls";
 import News from "./pages/news";
-import {Contact }from "./pages/contact";
+import { Contact } from "./pages/contact";
 import SingleNews from "./pages/blogDetail";
 import LoginForm from "./pages/login";
 import ViewPage from "./pages/viewPage";
-import Admin from './pages/Admin'
+import Admin from "./pages/Admin";
 import AddNew from "./Components/addNew/addNew";
-import {Dashboard }from "./Components/dashboard/dashboard";
+import { Dashboard } from "./Components/dashboard/dashboard";
 import { Listing } from "./Components/myListings/listings";
-import { Route,Routes } from "react-router-dom";
-
-
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-return(
-  <Routes>
-      <Route path="/dashboard" element={<Admin/>}>
-      <Route path="/dashboard/dash" element={<Dashboard/>}/>
-      <Route path="/dashboard/addNew" element={<AddNew/>}/>
-      <Route path="/dashboard/listing" element={<Listing/>}/>
-
-
+  return (
+    <Routes>
+      <Route path="/dashboard" element={<Admin />}>
+        <Route path="/dashboard/dash" element={<Dashboard />} />
+        <Route path="/dashboard/addNew" element={<AddNew />} />
+        <Route path="/dashboard/listing" element={<Listing />} />
       </Route>
 
       <Route path="/" element={<Properties />} />
@@ -30,12 +26,10 @@ return(
       <Route path="/mls" element={<Mls />} />
       <Route path="/view" element={<ViewPage />} />
       <Route path="/readmore" element={<SingleNews />} />
-      <Route path="/contact" element={<Contact/>} />
-      <Route path="/login" element={<LoginForm/>} />
-      </Routes>
-);
-
-
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/login" element={<LoginForm />} />
+    </Routes>
+  );
 }
 
 export default App;
