@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { createUser, loginUser } from "../features/authenticationSlice";
-import { register } from "../features/authenticationSlice";
 import { RxCross1 } from "react-icons/rx";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -13,7 +12,7 @@ import "./LoginForm.css";
 export default function LoginForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoggedIn, error, userCreated, loginSuccess } = useSelector(
+  const { isLoggedIn, error, userCreated } = useSelector(
     (state) => state.auth
   );
   const [userEmail, setUserEmail] = useState("");

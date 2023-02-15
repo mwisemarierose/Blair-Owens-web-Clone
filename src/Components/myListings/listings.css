@@ -11,7 +11,7 @@
 }
 
 #listing-card-image{
-    background: url("https://homeradar.kwst.net/images/all/1.jpg");
+    /* background: url("https://homeradar.kwst.net/images/all/1.jpg"); */
     background-position: center;
     background-size: cover;
     height: 150px;

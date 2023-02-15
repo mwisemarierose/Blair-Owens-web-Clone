@@ -18,7 +18,7 @@ export const listSlice = createSlice({
 export const createList = (data) => (dispatch) => {
   axios({
     method: "POST",
-    url: "https://klabapi.onrender.com/api/post/create",
+    url: "https://klabapi.onrender.com/api/posts/create",
     data: data,
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -27,8 +27,9 @@ export const createList = (data) => (dispatch) => {
     },
   }).then((res) => {
     dispatch(list());
+    console.log('helloo')
   });
 };
 
-export const { list } = authSlice.actions;
+export const { list } = listSlice.actions;
 export default listSlice.reducer;
