@@ -19,8 +19,7 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Main</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem active">
-              <NavLink to={"/dashboard/dash"} className="py-0">
-
+              <NavLink to={"/dashboard/dash"} className="px-0 py-0" style={{fontWeight: "500"}}>
               <FiTrendingUp className="sidebarIcon" />
               Dashboard
               </NavLink>
@@ -48,13 +47,13 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Listings</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem border-bottom">
-              <NavLink to={"/dashboard/listing"} className="py-0">
+              <NavLink to={"/dashboard/listing"} className="px-0 py-0" style={{fontWeight: "500"}}>
               <FiList className="sidebarIcon" />
               My listings
               </NavLink>
             </li>
             <li className="sidebarListItem border-bottom">
-              {/* <Link to={"/"} className="py-0"> */}
+              {/* <Link to={"/"} className="px-0 py-0" style={{fontWeight: "500"}}> */}
               <FiCalendar className="sidebarIcon" />
               Bookings
               {/* </Link> */}
@@ -66,7 +65,7 @@ export default function Sidebar() {
             </li>
             
             <li className="sidebarListItem border-bottom" >
-            <NavLink to={"/dashboard/addNew"} className="py-0"> 
+            <NavLink to={"/dashboard/addNew"} className="px-0 py-0" style={{fontWeight: "500"}}> 
               <FiFilePlus className="sidebarIcon" />
               Add New
               </NavLink>

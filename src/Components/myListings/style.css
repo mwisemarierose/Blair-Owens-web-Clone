@@ -1,37 +1,62 @@
-#listing-card{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+}
+
+#listing-card {
+    display: flex;
     background-color: white;
+    min-height: 170px;
     width: 100%;
-    margin-left: 30px;
-    margin-left: 50px;
-    margin-top: 150px;
-    
 }
 
-#listing-card-image{
-    background: url("https://d37ukvrrv3in12.cloudfront.net/listings/2f0059e5-0c4c-4ba0-89e9-31ca11a107eb/xl/0.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 150px;
+#listing-card-image {
+    height: auto;
     width: 220px;
-
+    position: relative;
 }
 
-#listing-card-desc{
+#listing-card-image .view-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#listing-card-image:hover .view-button {
+    opacity: 1;
+}
+
+#listing-card-image img {
+    height: 100%;
+}
+
+#listing-card-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin: 20px 20px 20px 0px;
-    height: 110px;
-    
+    height: auto;
 }
-#listing-card-title{
+
+#listing-card-title {
     color: grey;
     font-size: 16px;
     font-weight: 400;
     width: calc(100% - 20px);
     margin-left: 20px;
 }
-#listing-card-address{
+
+#listing-card-address {
     color: #144273;
     font-size: 12px;
     word-spacing: 2px;
@@ -39,7 +64,8 @@
     width: calc(100% - 20px);
     margin-left: 20px;
 }
-#listing-card-rating{
+
+#listing-card-rating {
     color: #CCCCCC;
     font-size: 12px;
     margin-top: 8px;
@@ -48,13 +74,27 @@
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
     padding-bottom: 8px;
 }
-#listing-card-rating .verified{
+
+#listing-card-rating .verified {
     color: #FACC39;
 }
-#listing-card-viewership{
-    font-size: 12px;
-    color: grey;
-    width: calc(100% - 20px);
+
+#listing-card-viewership {
+    display: flex;
+    justify-content: flex-end;
     margin-left: 20px;
     margin-top: 10px;
+}
+
+#listing-card-viewership>* {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#listing-card-viewership .edit {
+    fill: #3270FC;
+}
+
+#listing-card-viewership .delete {
+    fill: #97162b;
 }

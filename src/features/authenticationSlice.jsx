@@ -31,9 +31,7 @@ export const authSlice = createSlice({
     loginSuccess: (state, action) => {
       state.error = action.payload;
     },
-    // registerError :(state ,action) ={
-    //   state.error =action. payload
-    // }
+   
   },
 });
 
