@@ -8,7 +8,7 @@ import LoginForm from "./pages/login";
 import ViewPage from "./pages/viewPage";
 import Admin from "./pages/Admin";
 import { AddNew } from "./Components/addNew/addNew";
-import { Dashboard } from "./Components/Dashboard/Dashboard";
+import { DashboardComponent } from "./Components/Dashboard/Dashboard";
 import { Listing } from "./Components/MyListings/Listings";
 import { Route, Routes } from "react-router-dom";
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <Routes>
       <Route path="/dashboard" element={<Admin />}>
-        <Route path="/dashboard/dash" element={<Dashboard />} />
+        <Route path="/dashboard/dash" element={<DashboardComponent />} />
         <Route path="/dashboard/addNew" element={<AddNew />} />
         <Route path="/dashboard/listing" element={<Listing />} />
       </Route>
