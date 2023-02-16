@@ -6,7 +6,7 @@ import { BsFillEyeFill } from "react-icons/bs";
 
 export const Card =({image,title,district}) =>{
   return (
-    <div className="lists col-md-6">
+    <div className="cards col-md-6">
     <div id="listing-card">
     <a href="/view" class="image-link">  
     <div id="listing-card-image" class="image-link">
