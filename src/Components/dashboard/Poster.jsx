@@ -13,7 +13,6 @@ import {Chart, ArcElement} from 'chart.js'
 Chart.register(ArcElement);
 
 
-
 export const DashboardComponent = ()=>{
     const data = {
         labels: ['Red', 'Blue', 'Yellow'],
