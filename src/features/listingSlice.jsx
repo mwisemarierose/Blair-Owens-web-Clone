@@ -3,7 +3,7 @@ import axios from "axios";
 
 const initialState = {
   EstateCreated: false,
-  data: [],
+  listings: [],
 };
 
 export const listSlice = createSlice({
@@ -13,16 +13,14 @@ export const listSlice = createSlice({
     list: (state) => {
       state.EstateCreated = true;
     },
-    getList: (state, action) => {
-      console.log(action);
-      state.data = [action.payload];
+    getListings: (state, action) => {
+      state.listings = action.payload;
     },
   },
 });
 
 export const createList = (data) => (dispatch) => {
   const token = localStorage.getItem("token");
-  console.log(token);
   axios({
     method: "POST",
     url: "https://klabapi.onrender.com/api/estate/create",
@@ -33,24 +31,25 @@ export const createList = (data) => (dispatch) => {
   })
     .then((res) => {
       dispatch(list());
-      console.log("helloo");
     })
     .catch((err) => {
       console.log(err);
     });
 };
 
-export const getLists = () => async (dispatch) => {
+export const getAllListings = () => (dispatch) => {
   const token = localStorage.getItem("token");
-  console.log(token);
-  try {
-    const res = await axios.get("https://klabapi.onrender.com/api/estate");
-
-    dispatch(getList(res));
-  } catch (err) {
-    console.log(err);
-  }
+  axios({
+    method: "GET",
+    url: "https://klabapi.onrender.com/api/estate",
+    headers: {
+      Authorization: `bearer ${token}`,
+    },
+  }).then((response) => {
+    console.log(response);
+    dispatch(getListings(response.data));
+  });
 };
 
-export const { list, getList } = listSlice.actions;
+export const { list, getListings } = listSlice.actions;
 export default listSlice.reducer;

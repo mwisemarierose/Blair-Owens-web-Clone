@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import LoginForm from "./login";
 
 export default function News() {
-  const [modalOpen, setModalOpen] = useState(false);
+  
 
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {

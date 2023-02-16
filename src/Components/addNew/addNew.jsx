@@ -130,7 +130,7 @@ export const AddNew = () => {
                 <FaInfo />
               </span>
               <input
-                type="text"
+                type="number"
                 placeholder="Price"
                 name="price"
                 onChange={(e) => {
@@ -181,7 +181,7 @@ export const AddNew = () => {
                 <FaInfo />
               </span>
               <input
-                type="text"
+                type="number"
                 placeholder="Bath"
                 name="bath"
                 onChange={(e) => {

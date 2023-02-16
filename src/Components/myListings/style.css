@@ -1,9 +1,10 @@
-.cards {
+.lists {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     height: auto;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 #listing-card {
@@ -14,7 +15,7 @@
 }
 
 #listing-card-image {
-    height: auto;
+    height: 220px;
     width: 220px;
     position: relative;
 }
@@ -24,7 +25,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #144273;
     color: #fff;
     padding: 10px 20px;
     opacity: 0;
@@ -98,3 +99,6 @@
 #listing-card-viewership .delete {
     fill: #97162b;
 }
+.image-link {
+    display: inline-block;
+  }
