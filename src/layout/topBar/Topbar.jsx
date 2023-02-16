@@ -22,7 +22,7 @@ export default function Topbar() {
               <div class="primary-navigation">
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
                     <a href="#">Listings</a>
@@ -45,7 +45,7 @@ export default function Topbar() {
                     <a href="#">Agents</a>
                   </li>
                   <li>
-                    <a href="#">News</a>
+                    <a href="/news">News</a>
                   </li>
                   <li>
                     <a href="#">Pages</a>
