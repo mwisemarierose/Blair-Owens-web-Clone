@@ -4,7 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { BsFillStarFill, BsPencil, BsTrash } from "react-icons/bs";
 import { BsFillEyeFill } from "react-icons/bs";
 
-export const Card =({image,title,province}) =>{
+export const Card =({image,title,district}) =>{
   return (
     <div className="lists col-md-6">
     <div id="listing-card">
@@ -21,9 +21,9 @@ export const Card =({image,title,province}) =>{
     <div id="listing-card-desc">
       <div id="listing-card-title">{title}</div>
       <div id="listing-card-address">
-      {province}
+      
         <IoLocationSharp style={{ color: "#3270FC" }} />
-       
+        {district}
       </div>
       <div id="listing-card-rating">
         <BsFillStarFill className="verified" />

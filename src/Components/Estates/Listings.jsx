@@ -30,7 +30,7 @@ const [estate, setEstate] = useState([]);
                 <Card
                   image={item.image}
                   title={item.title}
-                  district={item.province}
+                  district={item.location.district}
                 />
               );
               
