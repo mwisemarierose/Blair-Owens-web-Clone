@@ -8,26 +8,34 @@ import {TiTick} from 'react-icons/ti';
 import {AiOutlineCalendar} from 'react-icons/ai';
 import {TiMessage} from 'react-icons/ti';
 import { FaMapMarked } from "react-icons/fa";
-import { Pie } from 'react-chartjs-2';
-import {Chart, ArcElement} from 'chart.js'
-Chart.register(ArcElement);
+import { Line } from 'react-chartjs-2';
+import { Chart, LineController, LineElement, PointElement, LinearScale, Title,CategoryScale, Tooltip } from 'chart.js';
+Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale, Tooltip);
 
 
 export const DashboardComponent = ()=>{
     const data = {
-        labels: ['Red', 'Blue', 'Yellow'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun' ,'july'],
         datasets: [
           {
-            label: 'My First Dataset',
-            data: [300, 50, 100],
-            backgroundColor: [
-              'rgb(255, 99, 132)',
-              'rgb(54, 162, 235)',
-              'rgb(255, 205, 86)',
-            ],
-            hoverOffset: 4,
-          },
-        ],
+            label: 'Sales',
+            data: [12, 19, 3, 5, 2, 3 ,4],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+          }
+        ]
+      };
+      const options = {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
       };
     return (
         <div>
@@ -86,7 +94,8 @@ export const DashboardComponent = ()=>{
             <div id="realdashboard-statistic">
                 Your Statistic
                 <div id="statistic-chart">
-                <Pie data={data} />
+                <h2>Quarterly sales for mobile phones</h2>
+                <Line data={data} options={options}  className="chart"  />
                 </div>
             </div>
             <div id="last-activities">

@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Card } from "./card";
 import axios from "axios";
+
+
 export const Listing = () => {
-const [estate, setEstate] = useState([]);
+  const [estate, setEstate] = useState([]);
 
   useEffect(() => {
     fetchEstate();
@@ -21,20 +23,18 @@ const [estate, setEstate] = useState([]);
       });
   };
 
-
   return (
     <div className="row px-3 py-4">
       {estate.map((item) => {
-       
-              return (
-                <Card
-                  image={item.image}
-                  title={item.title}
-                  district={item.location.district}
-                />
-              );
-              
-          })}
-      </div>
+        return (
+          <Card
+          id={item._id}
+            image={item.image}
+            title={item.title}
+            district={item.location.district}
+          />
+        );
+      })}
+    </div>
   );
 };

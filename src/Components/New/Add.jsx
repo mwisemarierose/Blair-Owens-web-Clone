@@ -18,6 +18,9 @@ export const AddNew = () => {
   const [img, setImg] = useState("");
 
   const dispatch = useDispatch();
+  const { EstateCreated } = useSelector(
+    (state) => state.list
+  );
 
   const handlePost = (e) => {
     const Data = new FormData();
@@ -238,6 +241,7 @@ export const AddNew = () => {
           </div>
           <div className="row">
             <div class="d-grid gap-2 d-md-block">
+            {EstateCreated && <p style={{color:'#328EFB'}}>Estate Created Successfully</p>}
               <button
                 class="btn mt-3 text-white"
                 style={{ backgroundColor: "#3270FC" }}
