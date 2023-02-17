@@ -17,24 +17,28 @@ export const Edit = () => {
 
   const [edited, setEdited] = useState(false);
 
-  function handleUpdate(id, formData) {
+  function handleUpdate(id) {
     const Data = new FormData();
     Data.append("title", title);
     Data.append("desc", desc);
     Data.append("image", img);
-    Data.append("price", price);
-    Data.append("LotSize", lotsize);
+    Data.append("price",price);
+    Data.append("LotSize",lotsize);
     Data.append("street", street);
     Data.append("district", district);
     Data.append("province", province);
     Data.append("status", status);
-    Data.append("beds", beds);
+    Data.append("beds",beds);
     Data.append("bath", bath);
 
-
-    fetch(`https://klabapi.onrender.com/api/estate/update/${id}`, {
-      method: "PUT",
-      body: formData,
+    const token = localStorage.getItem("token");
+    const id1 = localStorage.getItem("id");
+    fetch(`https://klabapi.onrender.com/api/estate/update/${id1}`, {
+      method: "PATCH",
+      body: Data,
+      headers: {
+        Authorization: `bearer ${token}`,
+      },
     })
       .then((response) => {
         if (response.ok) {
@@ -43,9 +47,7 @@ export const Edit = () => {
           throw new Error("Failed to EDIT");
         }
       })
-      .catch((error) => {
-        setError(error);
-      });
+     
   }
 
   return (
@@ -253,6 +255,7 @@ export const Edit = () => {
               <button
                 class="btn mt-3 text-white"
                 style={{ backgroundColor: "#3270FC" }}
+                
                 onClick={handleUpdate}
               >
                 Save changes

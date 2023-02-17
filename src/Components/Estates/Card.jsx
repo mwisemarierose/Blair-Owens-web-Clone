@@ -5,6 +5,7 @@ import { BsFillStarFill, BsPencil, BsTrash } from "react-icons/bs";
 import { BsFillEyeFill } from "react-icons/bs";
 
 export const Card =({image,title,district ,id}) =>{
+  localStorage.setItem('id',id)
  
   const [deleted, setDeleted] = useState(false);
   const [error, setError] = useState(null);
@@ -31,7 +32,7 @@ export const Card =({image,title,district ,id}) =>{
   return (
     <div className="cards col-md-6">
     <div id="listing-card">
-    <a href="/view" class="image-link">  
+    <a href="/dashboard/view" class="image-link">  
     <div id="listing-card-image" class="image-link">
       <img
         src={image}

@@ -154,6 +154,8 @@ export default function LoginForm() {
           >
             Login.
           </span>
+          {userCreated&& <p style={{color:'#328EFB'}}>User Created</p>}
+
         </div>
         <form id="popup-newbie-form" className="popup-form">
           <label>
@@ -200,18 +202,6 @@ export default function LoginForm() {
                 }}
                 id="newbie-password"
               />
-            </div>
-            {/* <div className="newbie-double-right">
-              <label>
-                Password again<span>*</span>
-              </label>
-              <input type={"text"} id="newbie-password-confirm" />
-            </div> */}
-            <div id="acception">
-              {/* <input type={"checkbox"} id="accept-checkbox" name="terms" />
-            <label id="terms-label">
-              I accept the <span id="terms">terms & Conditions</span>
-            </label> */}
             </div>
             <button
               id="create-account"
