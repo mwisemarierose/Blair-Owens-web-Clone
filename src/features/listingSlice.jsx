@@ -36,6 +36,23 @@ export const createList = (data) => (dispatch) => {
       console.log(err);
     });
 };
+// export const editList = (data) => (dispatch) => {
+//   const token = localStorage.getItem("token");
+//   axios({
+//     method: "POST",
+//     url: "https://klabapi.onrender.com/api/estate/update/{id}",
+//     data: data,
+//     headers: {
+//       Authorization: `bearer ${token}`,
+//     },
+//   })
+//     .then((res) => {
+//       dispatch(list());
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
 
 export const getAllListings = () => (dispatch) => {
   const token = localStorage.getItem("token");

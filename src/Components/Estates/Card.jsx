@@ -8,9 +8,9 @@ export const Card =({image,title,district ,id}) =>{
  
   const [deleted, setDeleted] = useState(false);
   const [error, setError] = useState(null);
-  useEffect(() => {
-    handleDelete();
-  }, []);
+  const handleBack = () => {
+    window.location.href = '/dashboard/edit'; 
+  };
 
   const handleDelete = (id) => {
     fetch(`https://klabapi.onrender.com/api/estate/delete/${id}`, {
@@ -59,7 +59,7 @@ export const Card =({image,title,district ,id}) =>{
       {deleted && <p>Deleted successfully</p>}
       {error && <p>{error.message}</p>}
         <BsTrash className="verified delete" onClick={() => handleDelete(id)} />
-        <BsPencil className="verified edit" />
+        <BsPencil className="verified edit" onClick={() =>handleBack()}/>
       </div>
     </div>
   </div>

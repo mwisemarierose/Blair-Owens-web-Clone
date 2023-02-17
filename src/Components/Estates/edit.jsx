@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { FaDirections, FaInfo } from "react-icons/fa";
-import "./style.css";
-import { createList } from "../../features/listingSlice";
+import "../New/style.css";
 
-export const AddNew = () => {
+export const Edit = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [bath, setBath] = useState("");
@@ -17,12 +15,9 @@ export const AddNew = () => {
   const [price, setPrice] = useState("");
   const [img, setImg] = useState("");
 
-  const dispatch = useDispatch();
-  const { EstateCreated } = useSelector(
-    (state) => state.list
-  );
+  const [edited, setEdited] = useState(false);
 
-  const handlePost = (e) => {
+  function handleUpdate(id, formData) {
     const Data = new FormData();
     Data.append("title", title);
     Data.append("desc", desc);
@@ -36,16 +31,29 @@ export const AddNew = () => {
     Data.append("beds", beds);
     Data.append("bath", bath);
 
-    e.preventDefault();
-    dispatch(createList(Data));
-  };
+
+    fetch(`https://klabapi.onrender.com/api/estate/update/${id}`, {
+      method: "PUT",
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          setEdited(true);
+        } else {
+          throw new Error("Failed to EDIT");
+        }
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }
 
   return (
     <div className="aos-navs w-100 d-flex flex-column">
       <ul>
-        <li className="active">Info</li>
+        <li>Info</li>
         <li>Location</li>
-        <li>Media</li>
+        <li className="active">Edit Estate</li>
         <li>Details</li>
         <li>Rooms</li>
         <li>Plans</li>
@@ -55,7 +63,7 @@ export const AddNew = () => {
       <div class="card w-100">
         <div class="card-header">
           <FaInfo className="text-primary" />
-          <span>Basic Informations</span>
+          <span>Edit Informations</span>
         </div>
         <div class="card-body row">
           <div className="col-md-4">
@@ -241,13 +249,13 @@ export const AddNew = () => {
           </div>
           <div className="row">
             <div class="d-grid gap-2 d-md-block">
-            {EstateCreated && <p style={{color:'#328EFB'}}>Estate Created Successfully</p>}
+              {edited && <p>Edited successfully</p>}
               <button
                 class="btn mt-3 text-white"
                 style={{ backgroundColor: "#3270FC" }}
-                onClick={handlePost}
+                onClick={handleUpdate}
               >
-                Save 
+                Save changes
               </button>
             </div>
           </div>
